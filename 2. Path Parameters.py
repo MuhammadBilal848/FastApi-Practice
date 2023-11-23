@@ -1,11 +1,20 @@
 import uvicorn
 from fastapi import FastAPI , Path
+from typing import Optional
 
 app = FastAPI()
 
 @app.get('/')
-def index():
-    return {'message': 'Hello, World'}
+def index(name:str = None): # here we set the query paramter to None so that it is not required
+    if name == None:
+        return {'Welcome': 'Stranger!!!'} 
+    return {'Welcome': f'{name}'}
+
+@app.get('/best_practice')
+def index(name: Optional[str] = None): # best practice is to use Optional[dtype] for handling datatypes
+    if name == None:
+        return {'Welcome': 'Stranger!!!'} 
+    return {'Welcome': f'{name}'}
 
 
 student_data = {1: {
