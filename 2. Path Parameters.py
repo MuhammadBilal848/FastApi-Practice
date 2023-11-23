@@ -34,7 +34,7 @@ student_data = {1: {
 # lt is less than
 # le is less than equal to
 # ge is greater than equal to
-def get_stu(student_id:int = Path(description='Enter you ID provided by the university',gt=0)):
+def get_stu(student_id:int = Path(description='Enter you ID provided by the university',gt=0,le = 3)):
     return student_data[student_id]
 
 

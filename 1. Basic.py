@@ -8,7 +8,7 @@ def index():
     return {'message': 'Hello, World'}
 
 @app.get('/home')
-def home(name: str):
+def home(name: str): # this way of assigning parameter is called 'Query' parameter.
     return {'Welcome To Home Page': f'{name}'}
 
 student_data = {1: {
@@ -32,7 +32,7 @@ student_data = {1: {
                }}
 
 @app.get('/get-student_data/{student_id}')
-def get_stu(student_id:int):
+def get_stu(student_id:int): # this way of assigning parameter is called 'Path' parameter.
     return student_data[student_id]
 
 
