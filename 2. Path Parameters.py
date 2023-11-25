@@ -11,10 +11,21 @@ def index(name:str = None): # here we set the query paramter to None so that it 
     return {'Welcome': f'{name}'}
 
 @app.get('/best_practice')
-def index(name: Optional[str] = None): # best practice is to use Optional[dtype] for handling datatypes
+def best_prac(name: Optional[str] = None): # best practice is to use Optional[dtype] for handling datatypes
     if name == None:
         return {'Welcome': 'Stranger!!!'} 
     return {'Welcome': f'{name}'}
+
+@app.get('/character')
+# if we add two or more parameters, python will show error
+# def char(age: Optional[int] = 19 ,  gender: Optional[str]):
+# because we cant define non-default parameter after default parameter
+# a workaround is that we should always define non default params before default params
+# def char(  gender: Optional[str] , age: Optional[int] = 19):
+# but there is another way
+def char(*,age: Optional[int] =     19 ,  gender: Optional[str]):
+    return {'Welcome': f'You are born in {2023 - age} and you gender is {gender}'}
+
 
 
 student_data = {1: {
