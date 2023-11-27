@@ -35,12 +35,6 @@ def index(name:str = None): # here we set the query paramter to None so that it 
 @app.get('/get-info/{student_id}')
 def info(student_id:int ,age:int):
     if student_id in student_data:
-        print('printing age param')
-        print(age)
-        print('printing student_data[student_id]age')
-        print(student_data[student_id],type(student_data[student_id]))
-        print(student_data[student_id]['age'])
-        print(age == student_data[student_id]['age'])
         if age == student_data[student_id]['age']:
             return student_data[student_id]
         return {'Message':'You entered wrong age information!'}
