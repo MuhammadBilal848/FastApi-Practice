@@ -7,7 +7,7 @@ app = FastAPI()
 def index():
     return {'message': 'Hello, World'}
 
-@app.get('/home')
+@app.get('/get-home')
 def home(name: str): # this way of assigning parameter is called 'Query' parameter.
     return {'Welcome To Home Page': f'{name}'}
 
