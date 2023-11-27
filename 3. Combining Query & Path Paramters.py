@@ -33,7 +33,7 @@ student_data = {1: {
                }}
 
 # here we combined the qurery and the path parameter
-@app.get('/info/{student_id}')
+@app.get('/get-info/{student_id}')
 def info(*, student_id:int = Path(ge = 0,le = 3),age:int):
     if age == student_data[student_id]['age']:
         return student_data[student_id]
