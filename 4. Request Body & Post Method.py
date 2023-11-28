@@ -50,7 +50,7 @@ def create_student(student_id : int , student : Student ):
         return {'Error':'Student alreay exist in the records'}
     student = student.dict() # this will convert the student class variable object into dict
     student_data[student_id] = student
-    return student_data
+    return student_data[student_id]
 
 
 if __name__ == '__main__':
