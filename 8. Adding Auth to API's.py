@@ -16,9 +16,9 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 db = {
     "bilal": {
-        "username": "bilal", # this username will be used for authentication
-        "full_name": "bilal haneef",
-        "email": "bilal@gmail.com",
+        "username": "your name", # this username will be used for authentication
+        "full_name": "your full name",
+        "email": "your email",
         "hashed_password": "$2b$12$lril/Kae3euKDShrWYgz2.yeI7bDPue1ewEOGYy.ZCRGPTMQKJOlm",
         # generate hash using get_password_hash('any_pass') and paste here , use plain password as 'password' for auth
         "disabled": False
