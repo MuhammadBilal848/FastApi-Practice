@@ -1,4 +1,4 @@
-* To run the app so that others can use APIs using "ip'.
+* To run the app so that others can use APIs using "ip'. Also `--reload` helps reload terminal automatically once u change code.
 ```
 uvicorn app:app --host 0.0.0.0 --port any_port --reload
 ```
